@@ -1,0 +1,14 @@
+body{
+    font-family: 'omor';
+}
+
+.papi{
+    font-family: 'omor';
+}
+
+@font-face {
+  font-family: 'omor';
+  src: url('../../css/fonts/OMORI_GAME2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
