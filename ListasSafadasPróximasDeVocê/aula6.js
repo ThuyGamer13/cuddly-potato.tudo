@@ -17,12 +17,39 @@
 */ 
 lista = []
 function AdicionarItem(){
-    item = document.getElementById('txt').value
+
+    // Pegando o item do input
+    item = document.getElementById('txt').value.toLowerCase().trim()
     document.getElementById('txt').value = ''
-    if( item.length > 0 ){
-        lista.push(item)
-    }else{
+    
+    // Verificação dos itens
+    if( item.length = 0 ){
         alert('Preencha o Campo.')
+    }else if( lista.includes(item)){
+        alert('Item Repetido')
+    }else{
+        lista.push(item)
     }
-    document.getElementById('p').innerText = lista.join(', ')
+
+    // Devolvendo a lista pro site
+    document.getElementById('p').innerHTML = '<li>'+lista.join('</li><li>')+'</li>'
 }
+
+function RemoverItem(){
+
+    // Pegando o item do input
+    item = document.getElementById('txt').value.toLowerCase().trim()
+    document.getElementById('txt').value = ''
+
+    // Verificar item para a remoção
+    if(lista.includes(item)){
+        index = lista.indexOf(item)
+        lista.splice(index,1)
+    }else{
+        alert('Item não encontrado.')
+    }
+
+    // Devolvendo a lista pro site
+    document.getElementById('p').innerHTML = '<li>'+lista.join('</li><li>')+'</li>'
+}
+
