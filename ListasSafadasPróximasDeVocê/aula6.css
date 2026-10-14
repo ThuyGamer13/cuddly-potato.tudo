@@ -2,6 +2,7 @@
     color: white;
     font-family: 'omor';
     background-color: black;
+    text-align: center;
 }
 
 .papi{
@@ -15,3 +16,60 @@
   font-style: normal;
 }
 
+.yes{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.no{
+    padding: 10px;
+    border-radius: 5px;
+    padding-left:11px;
+    padding-right:11px;
+}
+
+.no:hover{
+    border-color: white;
+}
+
+.yes:hover{
+    border-color: white;
+}
+
+.mayhaps{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.mayhaps:hover{
+    background-color: white;
+    color: black;
+}
+
+.p{
+    padding-right: 40px;
+}
+
+.p li{
+    background-color: white;
+    color: black;
+    border-color:white;
+    border-radius:5px;
+    width: 200px;
+    margin: 10px auto;
+}
+
+.p li:hover{
+    font-size:30px;
+}
+
+h1 img{
+    height: 40px;
+    width: 43px;
+    border-radius: 30px;
+}
+h1{
+    display:flex;
+    justify-content: center;
+    gap: 10px;
+}
