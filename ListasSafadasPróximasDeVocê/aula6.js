@@ -16,6 +16,7 @@
 
 */ 
 lista = []
+total = 8
 function AdicionarItem(){
 
     // Pegando o item do input
@@ -23,16 +24,17 @@ function AdicionarItem(){
     document.getElementById('txt').value = ''
     
     // Verificação dos itens
-    if( item.length = 0 ){
+    if( item.length <= 0 ){
         alert('Preencha o Campo.')
     }else if( lista.includes(item)){
         alert('Item Repetido')
+    }else if( lista.length >= total){
+        alert('O carrinho está cheio.')
     }else{
         lista.push(item)
     }
 
-    // Devolvendo a lista pro site
-    document.getElementById('p').innerHTML = '<li>'+lista.join('</li><li>')+'</li>'
+    verIty()
 }
 
 function RemoverItem(){
@@ -49,7 +51,19 @@ function RemoverItem(){
         alert('Item não encontrado.')
     }
 
-    // Devolvendo a lista pro site
-    document.getElementById('p').innerHTML = '<li>'+lista.join('</li><li>')+'</li>'
+    verIty()
+
 }
 
+function verIty(){
+    // Devolvendo a lista pro site
+    document.getElementById('p').innerHTML = ''
+    for(i=0; i<lista.length; i++){
+        document.getElementById('p').innerHTML +=
+        '<li>'+
+            lista[i]+
+            '<buttton class="botaodentro"><i class="fa fa-trash"></i></button>'+
+        '</li>'
+    }
+    document.getElementById('qnt').innerHTML= 'Existem '+lista.length+' itens na lista.'
+}
